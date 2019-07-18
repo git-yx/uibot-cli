@@ -2,7 +2,7 @@
   "name": "uibot-cli",
   "version": "0.0.1",
   "description": "a cli for gamechat developer .",
-  "repository": "https://github.com/git-yx/uibot-cli.git",
+  "repository": "https://github.com/git-yx/uibot-cli",
   "author": "willye <willye@tencent.com>",
   "bin": {
     "bot-cli": "bin/uibot"
