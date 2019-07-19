@@ -3,7 +3,7 @@ a cli for gamechat developer .
 
 ## Install
 ```
-  npm i @tencent/bot-cli -g
+  npm i bot-cli -g
 ```
 ## Usage
 ### bot create
