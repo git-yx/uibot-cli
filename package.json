@@ -1,5 +1,5 @@
 {
-  "name": "@tencent/bot-cli",
+  "name": "bot-cli",
   "version": "0.0.2",
   "description": "a cli for gamechat developer .",
   "repository": "https://github.com/git-yx/uibot-cli",
