@@ -1,12 +1,12 @@
-# uibot-cli
+# @tencent/bot-cli
 a cli for gamechat developer .
 
 ## Install
 ```
-  npm i uibot-cli -g
+  tnpm i @tencent/bot-cli -g
 ```
 ## Usage
-### uibot create
+### bot create
 构建流程：
 1. 拉取远程模板信息
 2. 选择你需要的远程模板
@@ -16,14 +16,14 @@ a cli for gamechat developer .
 6. 回答四个问题：a)项目名称 b)项目版本 c)项目描述 d)项目
 7. 进入构建过程
 8. 构建完成，开始你的coding之旅
-### uibot new
-- -c或者--config uibot.config.js
+### bot new
+- -c或者--config bot.config.js
 - -d或者--dest 指定模板生成路径
 ```
-uibot new page //新建一个页面
-uibot new component //新建一个组件
+bot new page //新建一个页面
+bot new component //新建一个组件
 ```
-**uibot.config.js配置示例：**
+**bot.config.js配置示例：**
 ```
 const path=require('path')
 module.exports={
@@ -120,6 +120,6 @@ templates每一项配置中的prompts使用示例：
 ```
 **项目实战：**
 
-uibot new page 和 uibot new component具体在项目中的使用可参考如下这个项目：
+bot new page 和 bot new component具体在项目中的使用可参考如下这个项目：
 
-[uibot-template](https://github.com/git-yx/uibot-template)
+[bot-template](https://github.com/git-yx/uibot-template)
