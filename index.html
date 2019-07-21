@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GameChat bot-cli Document v0.0.3 beta NPM</title>
+</head>
+
+<body>
+    <h1 class="package-description-redundant">a cli for gamechat developer .</h1>
+    <h2><a id="user-content-install" class="deep-link" href="#install" aria-hidden="true" rel="nofollow"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install</h2>
+    <pre><code>  npm i bot-cli -g
+    </code></pre><h2><a id="user-content-usage" class="deep-link" href="#usage" aria-hidden="true" rel="nofollow"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h2>
+    <h3><a id="user-content-bot-create" class="deep-link" href="#bot-create" aria-hidden="true" rel="nofollow"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>bot create</h3>
+    <p>构建流程：</p>
+    <ol>
+    <li>拉取远程模板信息</li>
+    <li>选择你需要的远程模板</li>
+    <li>判断本地模板仓库是否有这个模板？如有没有进入下一步；如果有，进入覆盖确认，确认覆盖则进入下一步，反之跳到第6步</li>
+    <li>输入模板远程仓库中你所需要的分支，默认是master</li>
+    <li>下载模板至本地模板库</li>
+    <li>回答四个问题：a)项目名称 b)项目版本 c)项目描述 d)项目</li>
+    <li>进入构建过程</li>
+    <li>构建完成，开始你的coding之旅</li>
+    </ol>
+    <h3><a id="user-content-bot-new" class="deep-link" href="#bot-new" aria-hidden="true" rel="nofollow"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>bot new</h3>
+    <ul>
+    <li>-c或者--config bot.config.js</li>
+    <li>-d或者--dest 指定模板生成路径</li>
+    </ul>
+    <pre><code>
+    bot new page //新建一个页面
+    bot new component //新建一个组件
+    </code></pre><p><strong>bot.config.js配置示例：</strong></p>
+    <pre><code>const path=require('path')
+    module.exports={
+        bid:{
+        helpers:{
+            toLowercase:(str)=&gt;str.toLocaleLowerCase()
+        },
+        page: {
+            output:path.join(__dirname,'src/pages'),
+            templates:[
+            {
+                name:'PageSample',
+                src:path.join(__dirname,'templates/pages/PageSample'),
+                prompts:[]
+            },
+            {
+                name:'PageReducer',
+                src:path.join(__dirname,'templates/pages/PageReducer'),
+                prompts:[]
+            }
+            ]
+        },
+        component:{
+            output:path.join(__dirname,'src/components'),
+            templates:[
+            {
+                name:'ComSample',
+                src:path.join(__dirname,'templates/components/ComSample'),
+                prompts:[
+                {
+                    type:'input',
+                    name:'content',
+                    message:'the content of component'
+                }
+                ]
+            }
+            ]
+        }
+        }
+    }
+    
+    </code></pre><h4><a id="user-content-helpers" class="deep-link" href="#helpers" aria-hidden="true" rel="nofollow"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>helpers</h4>
+    <p>通过helpers属性可以注册Handlebars的helpers。</p>
+    <pre><code>module.exports = {
+        helpers: {
+        lowercase: str =&gt; str.toLowerCase()
+        }
+    }
+    </code></pre><pre><code>{{ lowercase name }}
+    </code></pre><h4><a id="user-content-pages" class="deep-link" href="#pages" aria-hidden="true" rel="nofollow"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pages</h4>
+    <ul>
+    <li>output 页面生成目录</li>
+    <li>templates 可选择构建页面模板列表</li>
+    </ul>
+    <p>templates每一项配置：</p>
+    <ul>
+    <li>name 模板名称</li>
+    <li>src 模板路径</li>
+    <li>prompts 构建页面时询问的问题列表,拿到的答案可用于后续的模板渲染，可参照 <a href="https://github.com/SBoudrias/Inquirer.js" rel="nofollow">inquirer</a></li>
+    </ul>
+    <h4><a id="user-content-component" class="deep-link" href="#component" aria-hidden="true" rel="nofollow"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>component</h4>
+    <ul>
+    <li>output 组件生成目录</li>
+    <li>templates 可选择构建组件模板列表</li>
+    </ul>
+    <p>templates每一项配置：</p>
+    <ul>
+    <li>name 模板名称</li>
+    <li>src 模板路径</li>
+    <li>prompts 构建页面时询问的问题列表，拿到的答案可用于后续的模板渲染，可参照 <a href="https://github.com/SBoudrias/Inquirer.js" rel="nofollow">inquirer</a></li>
+    </ul>
+    <p><strong>注：</strong>
+    templates每一项配置中的prompts使用示例：</p>
+    <pre><code>{
+        templates:[
+        {
+            name:'PageSample',
+            src:path.join(__dirname,'templates/pages/PageSample'),
+            prompts:[{
+            type:'input',
+            name:'content',
+            message:'the content of component'
+            }]
+        }
+        ]
+    }
+    </code></pre><pre><code>{{content}}
+    </code></pre><p><strong>项目实战：</strong></p>
+    <p>bot new page 和 bot new component具体在项目中的使用可参考如下这个项目：</p>
+    <p><a href="https://github.com/git-yx/uibot-template" rel="nofollow">bot-template</a></p>
+    
+</body>
+
+</html>
