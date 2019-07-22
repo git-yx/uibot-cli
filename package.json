@@ -1,11 +1,14 @@
 {
   "name": "bot-cli",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "a cli for gamechat developer .",
   "repository": "https://github.com/git-yx/uibot-cli",
   "author": "willye <willye@tencent.com>",
   "bin": {
-    "bot": "bin/bot"
+    "bot": "bin/bot",
+    "bot-cli": "bin/bot",
+    "bot-create": "bin/bot-create",
+    "bot-new": "bin/bot-new"
   },
   "keywords": [
     "cli for gamechat bot create"
