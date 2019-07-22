@@ -20,10 +20,10 @@ program
     console.log('  Examples:')
     console.log()
     console.log(chalk.gray('    # new a page'))
-    console.log('    $ uibot new page')
+    console.log('    $ bot new page')
     console.log()
     console.log(chalk.gray('    # new a component'))
-    console.log('    $ uibot new component')
+    console.log('    $ bot new component')
     console.log()
   })
   .on('exit',()=>{
@@ -53,15 +53,15 @@ checkVersion(()=>{
  * Main
  */
 function main(){
-  //获取uibot.config.js的位置 
-  let configPath=path.join(process.cwd(),'uibot.config.js')
+  //获取bot.config.js的位置 
+  let configPath=path.join(process.cwd(),'bot.config.js')
   if(program.config){
     configPath=path.isAbsolute(program.config)?program.config:path.join(process.cwd(),program.config)
   }
-  const uibotConfig = require(configPath)
-  const templates = uibotConfig[`${newType}`].templates
-  const defaultDest = uibotConfig[`${newType}`].output
-  const helpers = uibotConfig.helpers
+  const botConfig = require(configPath)
+  const templates = botConfig[`${newType}`].templates
+  const defaultDest = botConfig[`${newType}`].output
+  const helpers = botConfig.helpers
   //注册helpers
   helpers && Object.keys(helpers).map(key => {
     Handlebars.registerHelper(key, helpers[key])
