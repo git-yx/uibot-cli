@@ -1,4 +1,4 @@
-# @tencent/bot-cli
+# bot-cli
 a cli for gamechat developer .
 
 ## Install
